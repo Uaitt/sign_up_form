@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+div#left-side {
+  width: 40vw;
+}
+
+div#right-side {
+  width: 60vw;
+}
