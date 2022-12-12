@@ -4,9 +4,9 @@ html, body {
 }
 
 input {
-  appearance: none;
-
+  outline: none;
 }
+
 body {
   margin-top: 15%;
 }
@@ -73,3 +73,8 @@ button {
   border-radius: 6%;
   padding: 2% 9%;
 }
+
+/*textarea, select, input, button { outline: none; }*/
+
+
+
