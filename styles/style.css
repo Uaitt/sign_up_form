@@ -1,12 +1,55 @@
+html, body {
+  height: 100%;
+  font-family: "Roboto";
+}
+
+h2, p {
+  text-align: center;
+}
+
+h2 {
+  color:rgb(235, 163, 68);
+}
+
+p, label {
+  color: rgb(75, 73, 70)
+}
+
 body {
+  margin-top: 15%;
+}
+
+.form-container {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
 }
 
-div#left-side {
-  width: 40vw;
+form {
+  width: 55%;
 }
 
-div#right-side {
-  width: 60vw;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+
+  height: 45%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: 0.8rem;
 }
