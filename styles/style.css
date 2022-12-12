@@ -3,20 +3,24 @@ html, body {
   font-family: "Roboto";
 }
 
-h2, p {
+body {
+  margin-top: 15%;
+}
+
+.monero {
+  display: flex;
+  justify-content: center;
+}
+h2, p{
   text-align: center;
 }
 
-h2 {
-  color:rgb(235, 163, 68);
+h2{
+  color:rgb(255, 183, 77);
 }
 
 p, label {
-  color: rgb(75, 73, 70)
-}
-
-body {
-  margin-top: 15%;
+  color: rgb(95, 93, 91);
 }
 
 .form-container {
@@ -50,6 +54,17 @@ label {
 }
 
 input {
-  font-family: inherit;
   font-size: 0.8rem;
+
+  border: 1px solid white;
+  border-bottom-color: rgb(196, 194, 191);
+  border-radius: 6%;
+}
+
+button {
+  background-color: rgb(255, 183, 77);
+  color:rgb(95, 93, 91);
+  border: 1px solid rgb(196, 194, 191);
+  border-radius: 6%;
+  margin-left: 10%;
 }
