@@ -3,6 +3,10 @@ html, body {
   font-family: "Roboto";
 }
 
+input {
+  appearance: none;
+
+}
 body {
   margin-top: 15%;
 }
@@ -11,12 +15,13 @@ body {
   display: flex;
   justify-content: center;
 }
+
 h2, p{
   text-align: center;
 }
 
 h2{
-  color:rgb(255, 183, 77);
+  color: rgb(255, 183, 77);
 }
 
 p, label {
