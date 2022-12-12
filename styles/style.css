@@ -7,7 +7,7 @@ body {
   margin-top: 15%;
 }
 
-.monero {
+.monero-icon {
   display: flex;
   justify-content: center;
 }
@@ -62,9 +62,9 @@ input {
 }
 
 button {
-  background-color: rgb(255, 183, 77);
-  color:rgb(95, 93, 91);
+  background-color: rgb(196, 194, 191);
+  color: rgb(95, 93, 91);
   border: 1px solid rgb(196, 194, 191);
   border-radius: 6%;
-  margin-left: 10%;
+  padding: 2% 9%;
 }
