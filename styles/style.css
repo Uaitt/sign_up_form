@@ -11,6 +11,11 @@ body {
   margin-top: 15%;
 }
 
+
+.instructions {
+  font-size: 12px;
+}
+
 .monero-icon {
   display: flex;
   justify-content: center;
@@ -40,7 +45,7 @@ form {
   width: 55%;
 }
 
-.cards {
+form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,7 +79,6 @@ button {
   padding: 2% 9%;
 }
 
-/*textarea, select, input, button { outline: none; }*/
 
 
 
