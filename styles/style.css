@@ -89,13 +89,3 @@ span.check {
   bottom: 10%;
   right: -10%;
 }
-
-/*
-input:invalid {
-  border-bottom: 1.7px solid rgb(216, 107, 107);
-}
-
-input:valid {
-  border-bottom: 1.7px solid rgb(80, 192, 80);
-}
-*/
