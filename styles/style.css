@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 input, button {
@@ -12,12 +12,7 @@ body {
 }
 
 .instructions {
-  font-size: 12px;
-}
-
-.monero-icon {
-  display: flex;
-  justify-content: center;
+  font-size: 0.8rem;
 }
 
 h2, p{
@@ -30,6 +25,11 @@ h2{
 
 p, label {
   color: rgb(95, 93, 91);
+}
+
+.monero-icon {
+  display: flex;
+  justify-content: center;
 }
 
 .form-container {
@@ -48,6 +48,8 @@ form {
 
   height: 45%;
   width: 35%;
+
+  position: relative;
 }
 
 .card {
@@ -61,11 +63,15 @@ label {
 }
 
 button {
-  background-color: rgb(196, 194, 191);
-  color: rgb(95, 93, 91);
+  background: rgb(196, 194, 191);
   border: 1px solid rgb(196, 194, 191);
+  color: rgb(95, 93, 91);
+
   border-radius: 6%;
   padding: 2% 9%;
+
+  position: absolute;
+  top: 100%;
 }
 
 button:hover {
@@ -84,17 +90,7 @@ span.validity-icon {
   right: 0%;
 }
 
-form {
-  position: relative;
-}
-
-button {
-  position: absolute;
-  top: 100%;
-}
-
 @media (min-width: 1206px) {
-
   body {
     margin-top: 4%;
   }
