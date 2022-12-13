@@ -23,12 +23,11 @@ function customizeElement(input) {
 function customizePassword(input) {
   if(input.value == '')
     setDefaultStyling(input);
-  else if(passwordValid(input) || passwordMatches(input)) {
+  else if(passwordValid(input) || passwordMatches(input))
     setValidStyling(input);
-    input.setCustomValidity('')
-  }
   else {
     setInvalidStyling(input);
+    // make field invalid
     input.setCustomValidity('sdf')
   }
 }
