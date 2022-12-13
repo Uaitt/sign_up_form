@@ -47,7 +47,7 @@ form {
   align-content: space-around;
 
   height: 45%;
-  width: 55%;
+  width: 35%;
 }
 
 .card {
@@ -73,8 +73,6 @@ button:hover {
 }
 
 input {
-  font-size: 0.8rem;
-
   border: 1px solid white;
   border-bottom-color: rgb(196, 194, 191);
   border-radius: 6%;
@@ -83,5 +81,34 @@ input {
 span.validity-icon {
   position: absolute;
   bottom: 10%;
-  right: -10%;
+  right: 0%;
 }
+
+form {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 100%;
+}
+
+@media (min-width: 1206px) {
+
+  body {
+    margin-top: 4%;
+  }
+  form {
+    max-width: 620px;
+    justify-content: space-around;
+    height: 30%;
+  }
+}
+
+@media (min-width: 1798px) {
+  form {
+    justify-content: space-around;
+    height: 30%;
+  }
+}
+
