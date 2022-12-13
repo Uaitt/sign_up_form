@@ -57,6 +57,7 @@ form {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 label {
@@ -81,6 +82,12 @@ input {
   border: 1px solid white;
   border-bottom-color: rgb(196, 194, 191);
   border-radius: 6%;
+}
+
+span.check {
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
 }
 
 /*

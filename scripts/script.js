@@ -8,10 +8,14 @@ inputs.forEach( input => {
 function checkValidity(input) {
   if(input.validity.valid) {
     input.style.borderColor = 'white white green'
-    span = document.querySelector('span#name')
-    span.innerHTML += "h"
+    span = document.querySelector(`span#${input.getAttribute('id')}`)
+    span.innerHTML = "✓"
+    span.style.color = "green"
   }
   else {
     input.style.borderColor = 'white white red'
+    span = document.querySelector(`span#${input.getAttribute('id')}`)
+    span.innerHTML = "✖"
+    span.style.color = "red"
   }
 }
