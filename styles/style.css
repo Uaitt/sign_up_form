@@ -3,14 +3,13 @@ html, body {
   font-family: "Roboto";
 }
 
-input {
+input, button {
   outline: none;
 }
 
 body {
   margin-top: 15%;
 }
-
 
 .instructions {
   font-size: 12px;
@@ -42,16 +41,13 @@ p, label {
 }
 
 form {
-  width: 55%;
-}
-
-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
 
   height: 45%;
+  width: 55%;
 }
 
 .card {
@@ -84,7 +80,7 @@ input {
   border-radius: 6%;
 }
 
-span.check {
+span.validity-icon {
   position: absolute;
   bottom: 10%;
   right: -10%;

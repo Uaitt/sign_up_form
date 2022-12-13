@@ -1,10 +1,8 @@
 const inputs = Array.from(document.querySelectorAll('input'))
 
-inputs.forEach( input => {
-  input.addEventListener('focusout', checkValidity.bind(this, input))
-})
+inputs.forEach( input => input.addEventListener('focusout', checkValidity.bind(this, input)))
 
-document.querySelector('form').addEventListener("submit", (event) => {
+document.querySelector('form').addEventListener('submit', (event) => {
   if (inputs.some( (input) => !input.validity.valid)) {
     event.preventDefault();
   }
