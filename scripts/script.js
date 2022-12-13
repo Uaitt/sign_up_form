@@ -1,14 +1,13 @@
-const inputs = Array.from(document.querySelectorAll('input'))
+const inputs = Array.from(document.querySelectorAll('input'));
 
-inputs.forEach( input => input.addEventListener('focusout', checkValidity.bind(this, input)))
+inputs.forEach( input => input.addEventListener('focusout', customizeElement.bind(this, input)));
 
 document.querySelector('form').addEventListener('submit', (event) => {
-  if (inputs.some( (input) => !input.validity.valid)) {
+  if (inputs.some( (input) => !input.validity.valid))
     event.preventDefault();
-  }
 });
 
-function checkValidity(input) {
+function customizeElement(input) {
   if(input.value == '') {
     input.style.borderColor = 'white white rgb(196, 194, 191)'
     span = document.querySelector(`span#${input.getAttribute('id')}`)
