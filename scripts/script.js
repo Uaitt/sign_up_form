@@ -1,45 +1,63 @@
-const inputs = Array.from(document.querySelectorAll('input'));
+const nonPasswordInputs = Array.from(document.querySelectorAll('input:not([type=password])'));
+const passwordInputs = Array.from(document.querySelectorAll('input[type=password]'));
+const form = document.querySelector('form');
 
-inputs.forEach( input => input.addEventListener('focusout', customizeElement.bind(this, input)));
-
-document.querySelector('form').addEventListener('submit', (event) => {
-  if (inputs.some( (input) => !input.validity.valid))
+nonPasswordInputs.forEach(input => input.addEventListener('focusout', customizeElement.bind(this, input)));
+passwordInputs.forEach(input => input.addEventListener('focusout', customizePassword.bind(this, input)));
+// don't submit the form if there is an invalid input
+form.addEventListener('submit', event => {
+  if (nonPasswordInputs.some(input => !input.validity.valid)
+      && passwordInputs.some(input => !input.validity.valid))
     event.preventDefault();
 });
 
 function customizeElement(input) {
-  if(input.value == '') {
-    defaultStyling(input);
-  }
-  else if (input.validity.valid && input.getAttribute('type') != 'password' || passwordValid(input)) {
-    validStyling(input);
-  }
-  else {
-    invalidStyling(input);
-  }
+  if(input.value == '')
+    setDefaultStyling(input);
+  else if (input.validity.valid)
+    setValidStyling(input);
+  else
+    setInvalidStyling(input);
 }
 
-function defaultStyling(input) {
+function customizePassword(input) {
+  if(input.value == '')
+    setDefaultStyling(input);
+  else if(passwordValid(input) || passwordMatches(input))
+    setValidStyling(input);
+  else
+    setInvalidStyling(input);
+}
+
+function setDefaultStyling(input) {
   input.style.borderColor = 'white white rgb(196, 194, 191)';
-  let span = document.querySelector(`span#${input.getAttribute('id')}`);
+
+  const span = document.querySelector(`span#${input.getAttribute('id')}`);
   span.innerHTML = '';
 }
 
-function validStyling(input) {
+function setValidStyling(input) {
   input.style.borderColor = 'white white rgb(80, 192, 80)';
-  let span = document.querySelector(`span#${input.getAttribute('id')}`);
+
+  const span = document.querySelector(`span#${input.getAttribute('id')}`);
   span.innerHTML = '✓';
   span.style.color = 'rgb(80, 192, 80)';
 }
 
-function invalidStyling(input) {
+function setInvalidStyling(input) {
   input.style.borderColor = 'white white rgb(216, 107, 107)';
-  let span = document.querySelector(`span#${input.getAttribute('id')}`);
+
+  const span = document.querySelector(`span#${input.getAttribute('id')}`);
   span.innerHTML = '✖';
   span.style.color = 'rgb(216, 107, 107)';
 }
 
 function passwordValid(input) {
-  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/
-  return input.getAttribute('name') == 'user_password' && passwordPattern.test(input.value)
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$/;
+  return input.getAttribute('name') == 'user_password' && passwordPattern.test(input.value);
+}
+
+function passwordMatches(input) {
+  return (input.getAttribute('name') == 'user_confirm_password'
+          && input.value == document.querySelector('input[name=user_password').value);
 }
