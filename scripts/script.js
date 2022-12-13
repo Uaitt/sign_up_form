@@ -1,8 +1,13 @@
-const inputs = document.querySelectorAll('input')
-
+const inputs = Array.from(document.querySelectorAll('input'))
 
 inputs.forEach( input => {
   input.addEventListener('focusout', checkValidity.bind(this, input))
+})
+
+document.querySelector('form').addEventListener("submit", (event) => {
+  if (inputs.some( (input) => !input.validity.valid)) {
+    event.preventDefault();
+  }
 });
 
 function checkValidity(input) {
@@ -16,11 +21,11 @@ function checkValidity(input) {
     span = document.querySelector(`span#${input.getAttribute('id')}`)
     span.innerHTML = "✓"
     span.style.color = "rgb(80, 192, 80)"
-    }
+  }
   else {
-      input.style.borderColor = 'white white rgb(216, 107, 107)'
-      span = document.querySelector(`span#${input.getAttribute('id')}`)
-      span.innerHTML = "✖"
-      span.style.color = "rgb(216, 107, 107)"
-    }
+    input.style.borderColor = 'white white rgb(216, 107, 107)'
+    span = document.querySelector(`span#${input.getAttribute('id')}`)
+    span.innerHTML = "✖"
+    span.style.color = "rgb(216, 107, 107)"
+  }
 }
