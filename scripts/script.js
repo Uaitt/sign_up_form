@@ -7,7 +7,7 @@ passwordInputs.forEach(input => input.addEventListener('focusout', customizePass
 // don't submit the form if there is an invalid input
 form.addEventListener('submit', event => {
   if (nonPasswordInputs.some(input => !input.validity.valid)
-      && passwordInputs.some(input => !input.validity.valid))
+      || passwordInputs.some(input => !input.validity.valid))
     event.preventDefault();
 });
 
@@ -23,10 +23,14 @@ function customizeElement(input) {
 function customizePassword(input) {
   if(input.value == '')
     setDefaultStyling(input);
-  else if(passwordValid(input) || passwordMatches(input))
+  else if(passwordValid(input) || passwordMatches(input)) {
     setValidStyling(input);
-  else
+    input.setCustomValidity('')
+  }
+  else {
     setInvalidStyling(input);
+    input.setCustomValidity('sdf')
+  }
 }
 
 function setDefaultStyling(input) {
