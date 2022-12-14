@@ -23,6 +23,7 @@ input, button {
 }
 
 h2{
+  font-size: 1.7rem;
   color: rgb(255, 183, 77);
 }
 
@@ -31,7 +32,7 @@ p, label {
 }
 
 .instructions, label {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 form {
@@ -89,4 +90,20 @@ span.validity-icon {
     max-width: 691px;
     width: 90%;
   }
+}
+
+footer {
+  margin-top: min(10%, 110px);
+  font-size: 1.4rem;
+  color:rgb(95, 93, 91);
+}
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.fa-github {
+  color:rgb(95, 93, 91);
+  font-size: 50px;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 5px;
 }
