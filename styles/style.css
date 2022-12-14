@@ -97,6 +97,7 @@ footer {
   font-size: 1.4rem;
   color:rgb(95, 93, 91);
 }
+
 .fa-github:hover {
   transform: rotate(360deg) scale(1.2);
 }
@@ -106,4 +107,10 @@ footer {
   font-size: 50px;
   transition: transform 0.3s ease-in-out;
   margin-left: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { /* removes snipper on <input type="number"> */
+  -webkit-appearance: none;
+  margin: 0;
 }
