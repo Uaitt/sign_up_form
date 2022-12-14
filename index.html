@@ -11,18 +11,17 @@
   <script src="./scripts/script.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <h2>Create an Account</h2>
 
-  <h2>Create an Account</h2>
+    <p>Thanks for choosing us</p>
+    <p class="instructions">Required files are marked with <span aria-label="required">*</span></p>
 
-  <p>Thanks for choosing us</p>
-  <p class="instructions">Required files are marked with <span aria-label="required">*</span></p>
+    <div class="monero-icon">
+      <img src="./images/monero-crypto-cryptocurrency-coins-svgrepo-com.svg" alt="Monero Logo">
+    </div>
 
-  <div class="monero-icon">
-    <img src="./images/monero-crypto-cryptocurrency-coins-svgrepo-com.svg" alt="Monero Logo">
-  </div>
-
-  <div class="form-container">
-    <form action="" method="get" novalidate>
+    <form id="main" action="" method="get" novalidate>
       <div class="card">
         <label for="name">Name <span aria-label="required">*</span></label>
         <input type="text" id="name" name="user_name" required>
@@ -58,8 +57,15 @@
         <input type="password" id="confirm_password" name="user_confirm_password" required>
         <span class="validity-icon" id="confirm_password"></span>
       </div>
-      <button type="submit">Sign up</button>
     </form>
+
+    <button form="main" type="submit">Sign up</button>
   </div>
+
+  <footer>Copyright © 2022 Uaitt
+    <a href="https://github.com/Uaitt" target="_blank">
+        <i class="fa fa-github" aria-hidden="true" style="font-size: 26px"></i>
+    </a>
+</footer>
 </body>
 </html>
