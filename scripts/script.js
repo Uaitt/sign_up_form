@@ -11,7 +11,7 @@ form.addEventListener('submit', event => {
       || passwordInputs.some(input => !input.validity.valid))
     event.preventDefault();
 
-    nonPasswordInputs.forEach(input => {
+    passwordInputs.concat(nonPasswordInputs).forEach(input => {
       if (!input.validity.valid)
         setInvalidStyling(input)
     })
