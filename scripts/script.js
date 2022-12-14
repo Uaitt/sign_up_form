@@ -13,7 +13,7 @@ form.addEventListener('submit', event => {
 
     passwordInputs.concat(nonPasswordInputs).forEach(input => {
       if (!input.validity.valid)
-        setInvalidStyling(input)
+        setInvalidStyling(input);
     })
 });
 
