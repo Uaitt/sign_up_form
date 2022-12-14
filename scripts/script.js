@@ -63,10 +63,10 @@ function setInvalidStyling(input) {
 
 function passwordValid(input) {
   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$/;
-  return input.getAttribute('name') == 'user_password' && passwordPattern.test(input.value);
+  return input.getAttribute('name') == 'user-password' && passwordPattern.test(input.value);
 }
 
 function passwordMatches(input) {
-  return (input.getAttribute('name') == 'user_confirm_password'
-          && input.value == document.querySelector('input[name=user_password').value);
+  return (input.getAttribute('name') == 'user-confirm-password'
+          && input.value == document.querySelector('input[name=user-password').value);
 }
