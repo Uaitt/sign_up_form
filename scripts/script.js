@@ -5,7 +5,7 @@ const form = document.querySelector('form');
 nonPasswordInputs.forEach(input => input.addEventListener('focusout', customizeElement.bind(this, input)));
 passwordInputs.forEach(input => input.addEventListener('focusout', customizePassword.bind(this, input)));
 
-// don't submit the form if there is an invalid input
+// don't submit the form if there is an invalid input and show the invalid fields
 form.addEventListener('submit', event => {
   if (nonPasswordInputs.some(input => !input.validity.valid)
       || passwordInputs.some(input => !input.validity.valid))
