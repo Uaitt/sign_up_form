@@ -13,7 +13,7 @@ input, button {
 }
 
 .sign-up-container {
-  margin-top: 8%;
+  margin-top: min(8%, 55px);
 
   display: flex;
   flex-direction: column;
@@ -27,10 +27,17 @@ h2{
   color: rgb(255, 183, 77);
 }
 
-p, label {
+p, label, button, .fa-github {
   color: rgb(95, 93, 91);
 }
 
+p.greeting {
+  margin-top: -0.6%;
+}
+
+.instructions {
+  margin-top: -0.1%;
+}
 .instructions, label {
   font-size: 1rem;
 }
@@ -58,7 +65,6 @@ input {
 button {
   background: rgb(196, 194, 191);
   border: 1px solid rgb(196, 194, 191);
-  color: rgb(95, 93, 91);
 
   margin-top: 2%;
   border-radius: 6%;
@@ -75,25 +81,8 @@ span.validity-icon {
   right: 0%;
 }
 
-@media (min-width: 640px) {
-  form {
-    column-gap: 5%;
-  }
-}
-
-@media (min-width: 1067px) {
-  .container {
-    margin-top: 4%;
-  }
-
-  form {
-    max-width: 691px;
-    width: 90%;
-  }
-}
-
 footer {
-  margin-top: min(10%, 110px);
+  margin-top: min(7%, 100px);
   font-size: 1.4rem;
   color:rgb(95, 93, 91);
 }
@@ -103,8 +92,20 @@ footer {
 }
 
 .fa-github {
-  color:rgb(95, 93, 91);
-  font-size: 50px;
+  font-size: calc(50/16)rem;
   transition: transform 0.3s ease-in-out;
-  margin-left: 5px;
+}
+
+@media (min-width: 640px) {
+  form {
+    column-gap: 5%;
+  }
+}
+
+@media (min-width: 1067px) {
+
+  form {
+    max-width: 691px;
+    width: 90%;
+  }
 }
