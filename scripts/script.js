@@ -57,7 +57,7 @@ function setInvalidStyling(input) {
   input.style.borderColor = 'white white rgb(216, 107, 107)';
 
   const span = document.querySelector(`span#${input.getAttribute('id')}`);
-  span.innerHTML = '×';
+  span.innerHTML = '✕';
   span.style.color = 'rgb(216, 107, 107)';
 }
 
